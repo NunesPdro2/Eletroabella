@@ -14,10 +14,10 @@ public class ClienteService {
     private ClienteRepository clienteRepository;
 
     public List<Cliente> listaClientes() {
-        return ClienteRepository.findAll();
+        return clienteRepository.findAll();
     }
 
     public Cliente cadastrarCliente(Cliente cliente) {
-        return ClienteRepository.save(cliente);
+        return clienteRepository.save(cliente);
     }
 }

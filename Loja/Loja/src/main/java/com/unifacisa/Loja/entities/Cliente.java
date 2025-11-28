@@ -16,4 +16,8 @@ public class Cliente {
     private String nome;
     private String endereco;
     private LocalDate datanascimeto;
+
+    public int getId() {
+        return id;
+    }
 }

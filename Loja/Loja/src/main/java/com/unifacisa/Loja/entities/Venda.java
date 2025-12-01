@@ -1,5 +1,6 @@
 package com.unifacisa.Loja.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDate;
@@ -23,6 +24,7 @@ public class Venda{
     private double precoTotal;
 
     @OneToMany(mappedBy = "venda", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<VendaProduto> itens;
 
     public void setCliente(Cliente cliente) {

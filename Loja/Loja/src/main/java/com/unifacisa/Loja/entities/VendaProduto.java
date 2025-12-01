@@ -1,5 +1,6 @@
 package com.unifacisa.Loja.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -21,6 +22,7 @@ public class VendaProduto {
 
     @ManyToOne
     @JoinColumn(name = "venda_id")
+    @JsonBackReference
     private Venda venda;
 
     public void setVenda_id(Venda venda_id) {

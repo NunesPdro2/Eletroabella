@@ -2,9 +2,11 @@ package com.unifacisa.Loja.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
-@Table(name = "cartao")
+@Table(name = "cartoes")
+@Data
 public class Cartao {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

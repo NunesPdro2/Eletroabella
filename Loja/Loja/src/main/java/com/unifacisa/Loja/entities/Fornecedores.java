@@ -10,7 +10,7 @@ public class Fornecedores {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
-    private String nomeFornedor;
+    private String nomeFornecedor;
 
     @ManyToMany(mappedBy = "fornecedores")
     private List<Produto> produtos;

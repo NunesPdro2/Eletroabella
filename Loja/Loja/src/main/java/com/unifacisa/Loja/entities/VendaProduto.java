@@ -8,13 +8,19 @@ import lombok.Data;
 @Data
 public class VendaProduto {
     @Id
-    @GeneratedValue (strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
+
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
+
+    @ManyToOne
+    @JoinColumn(name = "produto_id")
     private Produto produto;
 
     @ManyToOne
-    @JoinColumn (name = "venda.id")
+    @JoinColumn(name = "venda_id")
     private Venda venda;
 
     public void setVenda_id(Venda venda_id) {
